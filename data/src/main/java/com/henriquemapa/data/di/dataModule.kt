@@ -8,7 +8,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 val dataModule = module {
-
     single {
         Retrofit.Builder()
             .baseUrl("https://api.themoviedb.org/3/")
@@ -19,7 +18,6 @@ val dataModule = module {
     single<MovieService> {
         get<Retrofit>().create(MovieService::class.java)
     }
-
 
     single<MovieRepository> {
         MovieRepositoryImpl(get())

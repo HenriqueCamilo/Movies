@@ -15,7 +15,7 @@ class MovieRepositoryImpl(
         return try {
             val response = movieService.getTrendingMovies(BuildConfig.TMDB_API_KEY)
             val movies = response.results.map { it.toDomain() }
-            MoviesResult.Success(movies)
+            MoviesResult.success(movies)
         } catch (e: Exception) {
             MoviesResult.failure(e)
         }

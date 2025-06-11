@@ -10,10 +10,11 @@ abstract class MovieUseCase<out T, in P> {
     suspend operator fun invoke(params: P): MoviesResult<T> = withContext(Dispatchers.IO) {
         runCatching {
             run(params)
-        }.getOrElse { MoviesResult.Error(it) }
+        }.getOrElse { MoviesResult.failure(it) }
     }
 }
 
 suspend operator fun <T> MovieUseCase<T, Unit>.invoke(): MoviesResult<T> {
     return invoke(Unit)
 }
+
