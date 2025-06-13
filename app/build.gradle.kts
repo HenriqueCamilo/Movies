@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 }
 
@@ -82,4 +83,8 @@ dependencies {
     // ✅ Debug
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
+
+
 }

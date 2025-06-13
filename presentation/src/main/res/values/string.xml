@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trending_movies_title">Filmes em alta</string>
+    <string name="movie_poster_rating">Rating: %1$s</string>
+    <string name="error_unknown">Erro desconhecido</string>
+    <string name="loading">Carregando...</string>
+</resources>

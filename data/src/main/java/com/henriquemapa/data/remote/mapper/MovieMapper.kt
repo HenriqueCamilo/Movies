@@ -10,6 +10,6 @@ fun MovieResponse.toDomain(): Movie {
         title = title,
         overview = overview,
         posterUrl = posterPath?.let { "https://image.tmdb.org/t/p/w500$it" },
-        rating = voteAverage
+        rating = voteAverage.toString()
     )
 }

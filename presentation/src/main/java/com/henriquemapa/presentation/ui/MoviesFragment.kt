@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.henriquemapa.presentation.ui.composables.MoviesScreen
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.henriquemapa.presentation.viewmodel.MoviesViewModel
@@ -22,9 +23,19 @@ class MoviesFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
-                MoviesScreen(viewModel)
+                MoviesScreen(
+                    viewModel,
+                    onMovieClick = { movieId ->
+                        onMovieClick(movieId)
+                    }
+                )
             }
         }
+    }
+
+    private fun onMovieClick(movieId: Int) {
+        val action = MoviesFragmentDirections.actionMoviesFragmentToMovieDetailFragment(movieId)
+        findNavController().navigate(action)
     }
 
 }

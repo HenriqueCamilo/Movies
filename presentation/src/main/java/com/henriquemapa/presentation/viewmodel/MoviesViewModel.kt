@@ -18,6 +18,7 @@ class MoviesViewModel(
     private val _uiState = MutableStateFlow<MoviesUiState>(MoviesUiState.Loading)
     val uiState: StateFlow<MoviesUiState> = _uiState
 
+
     init {
         getMovies()
     }
