@@ -9,8 +9,8 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.henriquemapa.presentation.ui.composables.MoviesScreen
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.henriquemapa.presentation.viewmodel.MoviesViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MoviesFragment : Fragment() {
 

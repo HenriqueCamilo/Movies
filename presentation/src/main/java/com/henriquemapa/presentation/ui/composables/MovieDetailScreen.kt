@@ -4,12 +4,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import com.henriquemapa.presentation.UiState
-import com.henriquemapa.presentation.viewmodel.MoviesViewModel
+import com.henriquemapa.presentation.viewmodel.MovieDetailViewModel
 
 @Composable
-fun MoviesScreen(
-    viewModel: MoviesViewModel,
-    onMovieClick: (Int) -> Unit
+fun MovieDetailScreen(
+    viewModel: MovieDetailViewModel,
 ) {
     val state by viewModel.uiState.collectAsState()
 
@@ -19,9 +18,8 @@ fun MoviesScreen(
         }
 
         is UiState.Success -> {
-            MoviesScreenSuccess(
-                movies = result.data,
-                onMovieClick = onMovieClick,
+            MovieDetailScreenSuccess(
+                movie = result.data,
             )
         }
 
