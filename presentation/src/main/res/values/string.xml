@@ -3,7 +3,6 @@
     <string name="trending_movies_title">Filmes em alta</string>
     <string name="movie_poster_rating">Rating: %1$s</string>
     <string name="error_unknown">Erro desconhecido</string>
-    <string name="loading">Carregando...</string>
     <string name="original_language_label">Idioma Original</string>
     <string name="runtime_label">Duração</string>
     <string name="rating_label">Nota</string>

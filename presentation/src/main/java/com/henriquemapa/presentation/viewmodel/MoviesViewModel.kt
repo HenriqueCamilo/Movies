@@ -24,7 +24,7 @@ class MoviesViewModel(
         getMovies()
     }
 
-    private fun getMovies() {
+    fun getMovies() {
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             getTrendingMoviesUseCase.invoke()
